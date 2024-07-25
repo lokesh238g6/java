@@ -1,0 +1,40 @@
+import java.util.*;
+class student
+{
+    
+    int sno,total,m1,m2,m3,m4;
+    float avg;
+    
+public void getdata()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter roll no ");
+sno=sc.nextInt();
+System.out.println("enter m1 value");
+m1=sc.nextInt();
+System.out.println("enter m2 value");
+m2=sc.nextInt();
+System.out.println("enter m3 value");
+m3=sc.nextInt();
+System.out.println("enter m4 value");
+m4=sc.nextInt();
+total=m1+m2+m3+m4;
+
+System.out.println("total ="+total);
+
+System.out.println("sno"+sno);
+}
+public void average()
+{
+avg=(m1+m2+m3+m4)/4;
+System.out.println("average="+avg);
+}
+public static void main(String arg[])
+{
+    student a1=new student();
+    a1.getdata();
+    a1.average();
+     
+}
+}
+  
