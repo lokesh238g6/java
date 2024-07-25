@@ -1,0 +1,23 @@
+import java.util.*;
+class num
+{
+    int l,b;
+public void getdata()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter values in l");
+l=sc.nextInt();
+if(l%2==0)
+{
+    System.out.println("given num is even");
+}
+else
+{
+    System.out.println("given num is odd");
+}}
+public static void main(String arg[])
+{
+     num a1= new num();
+     a1.getdata();
+}
+}
