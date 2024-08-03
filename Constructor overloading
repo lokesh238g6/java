@@ -1,0 +1,41 @@
+import java.util.*;
+class Constructor
+{
+    int l,b,s;
+    double h;
+    
+    public Constructor(int x,int y)
+    {
+        l=x;
+        b=y;
+        System.out.println("area of rectangle is:"+(l*b));
+    }
+     public Constructor(int x)
+    {
+        s=x;
+        System.out.println("area of square is:"+(s*s));
+    }
+     public Constructor(int x,double z)
+    {
+        l=x;
+        h=z;
+        System.out.println("area of traingle is:"+(0.5*l*h));
+    }
+    public static void main(String args[])
+{
+ Scanner sc=new Scanner(System.in);
+ 
+ System.out.println("enter a b values");
+ int a=sc.nextInt();
+ int b=sc.nextInt();
+ System.out.println("enter c value");
+ int c=sc.nextInt();
+ System.out.println("enter d f values");
+ int d=sc.nextInt();
+ double f=sc.nextDouble();
+    Constructor a1=new Constructor(a,b);
+    Constructor a2=new Constructor(c);
+    Constructor a3=new Constructor(d,f);
+    
+}    
+}
