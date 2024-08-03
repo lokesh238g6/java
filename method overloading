@@ -1,0 +1,54 @@
+import java.util.*;
+class Method
+{
+int s,h,l,b;
+double r;
+//passing paramenters;
+public void area(int x,int y)
+{
+ l=x;
+ b=y;
+ System.out.println("area of rectangle ="+(l*b));
+}
+//with out passing parameters
+public void area()
+{
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter a,b values");
+   int a=sc.nextInt();
+   int b=sc.nextInt();
+   System.out.println("area of rectangle ="+(a*b));
+}
+public void area(int z)
+{
+ s=z;
+ System.out.println("area of square ="+(s*s));
+}
+public void area(int x,double k)
+{
+
+ l=x;
+ r=k;
+ double c;
+c=0.5*l*r;
+  System.out.println("area of triangle="+c);
+}
+public static void main(String args[])
+{
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter a,b values");
+   int a=sc.nextInt();
+   int b=sc.nextInt();
+   System.out.println("enter xx values");
+   int xx=sc.nextInt();
+   System.out.println("enter e,f values");
+    int e=sc.nextInt();
+   double f=sc.nextDouble();
+   
+  Method a1=new Method();
+   a1.area(a,b);
+   a1.area();
+   a1.area(xx);
+   a1.area(e,f);
+}
+}
