@@ -1,0 +1,47 @@
+class Student {
+    int rollno, m1, m2, m3, m4, total;
+    String name;
+    double avg;
+
+    // Method to set and print the student's name
+    public void details(String a)
+    {
+        name = a;
+        //System.out.println("Name of the student is: " + this.name);
+    }
+
+    // Method to set and print the student's roll number
+    public void details(int x) {
+        rollno = x;
+       // System.out.println("Student roll No is: " + this.rollno);
+    }
+
+    // Method to set and print the student's marks, total, and average
+    public void details(int b, int c, int d, int e) {
+        m1 = b;
+        m2 = c;
+        m3 = d;
+        m4 = e;
+        total = m1 + m2 + m3 + m4;
+        avg = total / 4.0; // Use 4.0 for floating-point division
+       //System.out.println("Total is: " + this.total);
+        //System.out.println("Average is: " + this.avg);
+    }
+
+    // Method to print all details
+    public void printAllDetails() {
+        System.out.println("Name of the student is: " + name);
+        System.out.println("Student roll No is: " + rollno);
+        System.out.println("Marks: " + m1 + ", " + m2 + ", " + m3 + ", " + m4);
+        System.out.println("Total is: " + total);
+        System.out.println("Average is: " + avg);
+    }
+
+    public static void main(String[] args) {
+        Student a1 = new Student();
+        a1.details("lokesh"); // Sets and prints the name
+        a1.details(23);  // Sets and prints the roll number
+        a1.details(24, 56, 87, 98); // Sets and prints the marks, total, and average
+        a1.printAllDetails(); // Prints all details
+    }
+}
