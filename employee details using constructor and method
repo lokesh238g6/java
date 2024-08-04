@@ -1,0 +1,57 @@
+import java.util.*;
+class Employee
+{
+ String name;
+ double salery;
+ int eno;
+ public  Employee()
+ {
+     name="";
+     eno=0;
+     salery=0.0;
+ }
+ public Employee(String x,int y,double z)
+ {
+    name=x;
+    eno=y;
+    salery=z;
+ }
+ public void details()
+ {
+     name="";
+     eno=0;
+     salery=0.0;
+ }
+ public void details(String x,int y,double z)
+ {
+     name=x;
+     eno=y;
+     salery=z;
+ }
+ public void display()
+ {
+     System.out.println("Employee name is :"+name);
+     System.out.println("Employee id is :"+eno);
+     System.out.println("Employee salery is :"+salery);
+ }
+ public static void main(String args[])
+ {
+     //Scanner sc=new Scanner(System.in);
+    // System.out.println("Enter employee name :");
+     //String a=sc.nextLine();
+     //System.out.println("Enter employee id :");
+     //int b=sc.nextInt();
+      //System.out.println("Enter employee salery :");
+     //double c=sc.nextDouble();
+     
+     Employee a1=new Employee();
+     a1.details();
+     a1.display();
+     Employee b1=new Employee();
+     b1.display();
+     Employee a2=new Employee("lokesh",42,70000);
+     a2.display();
+     Employee a3=new Employee();
+     a3.details("kathu",98,87667);
+     a3.display();
+ }}
