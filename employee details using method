@@ -1,0 +1,28 @@
+class employee
+{
+ int eno;
+ int esalary;
+ String address;
+ public void input(int x,int y,String z)
+ {
+     eno=x;
+     esalary=y;
+     address=z;
+     System.out.println(+eno);
+     System.out.println(+esalary);
+     System.out.println(address);
+ }
+ public void input()
+ {
+     System.out.println("The employee details is:");
+     System.out.println("The employee num is:"+eno);
+     System.out.println("The employee salary is:"+esalary);
+     System.out.println("The employee address is:"+address);
+ }
+ public static void main(String args[])
+ {
+     employee a1=new employee();
+     a1.input(1,90000,"\nVuyyuru\n521165\nkrishna(Dist)\nAndhra Pradesh");
+     a1.input();
+ }
+}
