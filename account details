@@ -1,0 +1,53 @@
+//Write a   Java  program to design  class called Bank with the data members, account number, account type, name, intial balance  
+//a. use parameterized constructor to assign values to datamembers.
+//b. depositAmount()-ask the user to enter the amount to deposit and addthe amount to the balance.
+ //c. withdrawAmount() - ask the user to enter the amount to withdraw and update the amount balance finally 
+//d.display():  To display CustomerInformation.	CO1	K3//
+import java.util.*;
+class Bank
+{
+    int acnum;
+    String actype,name;
+    double balance;
+    public Bank(int a,String b,String c,double d)
+    {
+        acnum=a;
+        actype=b;
+        name=c;
+        balance=d;
+        System.out.println("name is"+name);
+    System.out.println("acnum is"+acnum);
+    System.out.println("actype is"+actype);
+    System.out.println("balance is"+balance);
+    }
+    public void depositamount()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter amount to be deposit");
+        double a=sc.nextInt();
+        double total=a+balance;
+        System.out.println("available balance is"+total);
+    }
+    public void withdraw()
+    {
+     Scanner sc=new Scanner(System.in);
+        System.out.println("enter amouny to be withdraw");
+        double b=sc.nextInt();
+         double total=balance-b;
+        System.out.println("available balance is"+total);
+}
+public void display()
+{
+    System.out.println("name is"+name);
+    System.out.println("acnum is"+acnum);
+    System.out.println("actype is"+actype);
+    System.out.println("balance is"+balance);
+}
+public static void main(String args[])
+{
+    Bank c1=new Bank(22,"savings","lokesh",7000);
+    c1.depositamount();
+    c1.withdraw();
+    c1.display();
+}
+}
