@@ -1,0 +1,37 @@
+import java.util.*;
+class Movieticket
+{
+    
+    static int  b=150;
+    int reserved_tickets;
+    public void reserve()
+    {
+         Scanner sc =new Scanner(System.in);
+         System.out.println("enter the no of tickets you want");
+         int reserved_tickets=sc.nextInt();
+         if(reserved_tickets<b)
+         b=b-reserved_tickets;
+        // System.out.println("tickets not available");
+         else
+         System.out.println("tickets not available");
+        // b=b-reserved_tickets;
+    }
+    public static void availability()
+    {
+        System.out.println("available tickets are"+b);
+        
+    }
+    public static void main (String args[])
+    {
+        Movieticket c1=new Movieticket();
+        Movieticket.availability();
+        c1.reserve();
+         Movieticket c2=new Movieticket();
+        Movieticket.availability();
+        c2.reserve();
+        Movieticket c3=new Movieticket();
+        Movieticket.availability();
+        c3.reserve();
+        Movieticket.availability();
+        }
+}
