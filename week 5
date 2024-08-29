@@ -1,0 +1,206 @@
+import java.util.*;
+class A
+ {
+    int x, y;
+    public void set(int l, int b)
+ {
+        x = l;
+        y = b;
+   }
+    public void display() {
+    System.out.println("x value is = " + x + " y value is = " + y);
+    }
+}
+
+class B extends A {
+    int z;
+    public void set(int l, int b, int q) {
+        super.set(l, b);
+        z = q;
+    }
+    public void display() {
+        System.out.println("x value is = " + x + " y value is = " + y + " z value is = " + z);
+    }
+}
+
+public class m1
+ {
+    public static void main(String[] args) {
+        B c1 = new B();
+        c1.set(10, 20, 23);
+        c1.display();
+    }
+}
+
+
+import java.util.*;
+
+class Q {
+    int q;
+
+    public Q() {
+        q = 10;
+    }
+
+    public void display() {
+        System.out.println("q value is = " + q);
+    }
+}
+
+class R extends Q {
+    int r;
+
+    public R() {
+        super();
+        r = 16;
+    }
+    public void display() {
+        super.display();
+        System.out.println("r value is = " + r);
+    }
+}
+
+class S extends R {
+    int s;
+
+    public S() {
+        super();
+        s = 16;
+    }
+    public void display() {
+        super.display();
+        System.out.println("s value is = " + s);
+    }
+}
+
+public class m2 {
+    public static void main(String[] args) {
+        S c1 = new S();
+        c1.display(); 
+    }
+}
+
+
+
+class Person 
+{
+     String firstname;
+     String lastname;
+public void setPersonDetails(String firstname, String lastname)
+ {
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+
+    public void displayPersonDetails()
+ {
+        System.out.println("First Name: " + firstname);
+        System.out.println("Last Name: " + lastname);
+    }
+}
+
+class Employee extends Person
+ {
+    int eno;
+    String edept;
+    double esal;
+    public void setEmployeeDetails(int eno, String edept, double esal) {
+        this.eno = eno;
+        this.edept = edept;
+        this.esal = esal;
+    }
+    public void displayPersonDetails()
+ {
+        super.displayPersonDetails();
+        System.out.println("Employee Number: " + eno);
+        System.out.println("Department: " + edept);
+        System.out.println("Salary: " + esal);
+    }
+}
+
+
+public class m3 
+{
+        public static void main(String[] args)
+ {
+        Employee emp = new Employee();
+        emp.setPersonDetails("lokesh","nukasani");
+        emp.setEmployeeDetails(12345, "IT", 75000.00);
+        
+        
+        emp.displayPersonDetails();
+    }
+}
+
+
+
+class Person 
+{
+    String firstname;
+    String lastname;
+
+    public void setPersonDetails(String firstname, String lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+
+    public void displayPersonDetails()
+ {
+        System.out.println("First Name: " + firstname);
+        System.out.println("Last Name: " + lastname);
+    }
+}
+class Employee extends Person
+ {
+    int eno;
+    String edept;
+    double esal;
+    public void setEmployeeDetails(int eno, String edept, double esal)
+ {
+        this.eno = eno;
+        this.edept = edept;
+        this.esal = esal;
+    }
+    public void displayPersonDetails() {
+        super.displayPersonDetails();
+        System.out.println("Employee Number: " + eno);
+        System.out.println("Department: " + edept);
+        System.out.println("Salary: " + esal);
+    }
+}
+class Department
+ {
+    int dno;
+    String dname;
+    int experience;
+
+    public void setDepartmentDetails(int dno, String dname, int experience)
+ {
+        this.dno = dno;
+        this.dname = dname;
+        this.experience = experience;
+    }
+
+    public void displayDepartmentDetails() 
+{
+        System.out.println("Department Number: " + dno);
+        System.out.println("Department Name: " + dname);
+        System.out.println("Experience: " + experience);
+    }
+}
+public class m4
+{
+    public static void main(String[] args)
+ {
+        Employee emp = new Employee();
+        emp.setPersonDetails("Lokesh", "Nukasani");
+        emp.setEmployeeDetails(12345, "IT", 75000.00);
+        emp.displayPersonDetails();
+        Department dept = new Department();
+        dept.setDepartmentDetails(101, "Technology", 5);
+        dept.displayDepartmentDetails();
+    }
+}
+
+
+
