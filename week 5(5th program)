@@ -1,0 +1,46 @@
+import java.util.*;
+
+class Employee {
+    String address, name, gender;
+    int age;
+
+    public Employee(String address, String name, String gender, int age)
+    {
+        this.name = name;
+        this.address = address;
+        this.age = age;
+        this.gender = gender;
+    }
+
+    public void display() {
+        System.out.println("Employee name is: " + name);
+        System.out.println("Employee address is: " + address);
+        System.out.println("Employee age is: " + age);
+        System.out.println("Employee gender is: " + gender);
+    }
+}
+
+class FullTimeEmployee extends Employee {
+    double salary;
+    String designation;
+    public FullTimeEmployee(String address, String name, String gender, int age, double salary, String designation)
+    {
+        super(address, name, gender, age);
+        this.salary = salary;
+        this.designation = designation;
+    }
+    public void display() {
+        super.display();
+        System.out.println("Employee salary is: " + salary);
+        System.out.println("Employee designation is: " + designation);
+    }
+}
+
+public class m3
+{
+    public static void main(String[] args) 
+    {
+        FullTimeEmployee s1 = new FullTimeEmployee("bapatla", "lokesh", "Male", 30, 20000, "Manager");
+        s1.display();
+    }
+}
