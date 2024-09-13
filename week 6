@@ -1,0 +1,197 @@
+//Create a class called shaped use the class to store two double data type values that could
+//be used to compute the area of figures. Drive two specific class called triangle and rectangle from the base class shape. Use dynamic method dispatcher
+import java.util.*;
+class m2
+{
+    public static void main(String args[])
+    {
+        shaped A;
+        rectangle s1=new rectangle();
+        A=s1;
+        s1.area();
+        shaped B;
+        triangle s2=new triangle();
+        B=s2;
+        s2.area();
+        
+    }
+}
+class shaped
+{
+    double a,b;
+    public void input()
+    {
+     Scanner  sc =new Scanner(System.in);
+     System.out.println("enter A value");
+     a=sc.nextDouble();
+     System.out.println("enter B value");
+     b=sc.nextDouble();
+    }
+}
+    class rectangle extends shaped
+    {
+        void area()
+        {
+            super.input();
+            System.out.println("area of rectangle is :"+(a*b));
+        }
+    }
+     class triangle extends shaped
+    {
+        void area()
+        {
+            super.input();
+            System.out.println("area of triangle is :"+(0.5*a*b));
+        }
+}
+
+
+
+
+
+
+
+import java.util.Scanner;
+class Bank
+{
+     double amount;
+    public Bank(double amount) 
+    {
+        this.amount = amount;
+    }
+    public void deposit() 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("overridden in subclasses.");
+    }
+    public void withdraw()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("overridden in subclasses.");
+    }
+}
+
+class HDFC extends Bank 
+{
+   public HDFC(double amount)
+   {
+        super(amount);
+    }
+    public void deposit() 
+    {
+        //super(amount);
+        Scanner sc = new Scanner(System.in);
+    System.out.print("Enter the amount to be deposited in HDFC: ");
+        double a = sc.nextDouble();
+        amount += a;
+        System.out.println("Deposited " + a + " in HDFC. Current balance: " + amount);
+    }
+    public void withdraw()
+    {
+        Scanner sc = new Scanner(System.in);
+ System.out.print("Enter the amount to be withdrawn from HDFC: ");
+        double b = sc.nextDouble();
+        if (b <= amount)
+        {
+            amount -= b;
+            System.out.println("Withdrew " + b + " from HDFC. Current balance: " + amount);
+        }
+        else 
+        {
+            System.out.println("Insufficient funds in HDFC.");
+        }
+    }
+}
+
+class SBI extends Bank 
+{
+   public SBI(double amount) {
+        super(amount);
+    }
+    public void deposit()
+    {
+       // super(amount);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the amount to be deposited in SBI: ");
+        double a= sc.nextDouble();
+        amount += a;
+        System.out.println("Deposited " + a + " in SBI. Current balance: " + amount);
+}
+    public void withdraw()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the amount to be withdrawn from SBI: ");
+        double b = sc.nextDouble();
+        if (b <= amount) {
+            amount -= b;
+            System.out.println("Withdrew " + b + " from SBI. Current balance: " + amount);
+        } 
+        else 
+        {
+            System.out.println("Insufficient funds in SBI.");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Bank bankRef;
+        HDFC s1 = new HDFC(20000);
+        bankRef=s1;
+        bankRef.deposit();
+        bankRef.withdraw();
+        SBI s2= new SBI(15000);
+     bankRef=s2;
+        bankRef.deposit();
+        bankRef.withdraw();
+    }
+}
+
+
+
+
+
+
+abstract class Shape 
+{
+    int a,b;
+    
+    public Shape(int a, int b) 
+    {
+        this.a = a;
+        this.b = b;
+    }
+    public abstract double area();
+}
+class Triangle extends Shape 
+{
+    public Triangle(int a, int b)
+    {
+        super(a,b);
+    }
+    public double area() 
+    {
+        System.out.println("area is :"+(0.5*a*b));
+    }
+}
+class Rectangle extends Shape 
+{
+
+    public Rectangle(int a, int b)
+    {
+        super(a,b);
+    }
+    public double area() 
+    {
+        System.out.println("area is :"+(a*b));
+    }
+}
+public class loki
+{
+    public static void main(String[] args)
+    {
+        Shape triangle = new Triangle(10, 5);
+        Shape rectangle = new Rectangle(10, 5);
+    }
+}
