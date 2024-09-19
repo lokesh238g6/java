@@ -1,0 +1,55 @@
+import java.util.*;
+public class m1
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new
+        Result s1 = new Result("loki",1,80, 100);
+        
+    }
+}
+interface Sport
+{
+    int sportGraceMarks = 5; 
+}
+
+class Student 
+{
+    String name;
+    int rollNo;
+
+    public Student(String name, int rollNo) 
+    {
+        this.name = name;
+        this.rollNo = rollNo;
+    }
+}
+
+class Exam extends Student 
+{
+    int marks;
+    double maxMarks;
+
+    public Exam(String name, int rollNo, int marks, double maxMarks) 
+    {
+        super(name, rollNo); 
+        this.marks = marks;
+        this.maxMarks = maxMarks; 
+    }
+}
+
+class Result extends Exam implements Sport
+{
+    int total;
+    public Result(String name, int rollNo, int marks, double maxMarks) 
+    {
+        super(name, rollNo, marks, maxMarks); 
+        System.out.println("Student name is :"+name);
+        System.out.println("Student rollNo "+rollNo);
+        System.out.println("Student marks"+marks);
+        System.out.println("Student maxmarks is"+maxMarks);
+        total=marks+sportGraceMarks;
+        System.out.println("total marks ="+total);
+        
+    }
+}
