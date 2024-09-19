@@ -1,0 +1,69 @@
+import java.util.*;
+class m2
+{
+    public static void main(String args[])
+    {
+        shaped A;
+        rectangle s1=new rectangle();
+        A=s1;
+        A.area();
+        A.perimeter();
+         
+        square s2=new square();
+        A=s2;
+        A.area();
+        A.perimeter();
+        
+    }
+}
+class shaped
+{
+    double a,b;
+            void area()
+            {
+    System.out.println("enter A value");
+                
+          }
+             void perimeter()
+     {
+                System.out.println("enter A value");
+                 
+     }
+            
+   public void input()
+    {
+   Scanner  sc =new Scanner(System.in);
+     System.out.println("enter A value");
+     a=sc.nextDouble();
+     System.out.println("enter B value");
+     b=sc.nextDouble();
+   }
+}
+    class rectangle extends shaped
+    {
+        void area()
+        {
+             super.input();
+           
+            System.out.println("area of rectangle is :"+(a*b));
+        }
+        void perimeter()
+        {
+            super.input();
+            System.out.println("perimeter of rectangle"+(2*a+b));
+        }
+    }
+     class square extends shaped
+    {
+        void area()
+        {
+            super.input();
+            System.out.println("area of square is :"+(a*a));
+        }
+        void perimeter()
+        {
+            super.input();
+            System.out.println("perimeter of square"+(4*a));
+        
+        }
+        }
