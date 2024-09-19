@@ -1,0 +1,28 @@
+import java.util.*;
+class hello
+{
+    int a,b;
+    public hello(int a,int b)
+    {
+    this.a=a;
+    this.b=b;
+    }
+    public void div()
+    {
+        try
+        {
+         System.out.println(a/b);
+         
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println(e);
+        }
+        System.out.println("rest of thr code");
+    }
+public static void main(String args[])
+{
+    hello s1=new hello(0,4);
+    s1.div();
+}
+}
