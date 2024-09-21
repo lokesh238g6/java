@@ -1,0 +1,83 @@
+import java.util.*;
+abstract class Bank
+{
+ int amount;
+public Bank(int amount)
+{
+this.amount=amount;
+}
+abstract  void withdraw();
+abstract void deposit();
+}
+class hdfc extends Bank
+{
+int deposit;
+int withdraw;
+Scanner sc=new Scanner(System.in);
+public hdfc(int amount)
+{
+super(amount);
+}
+public void withdraw()
+{
+ System.out.println("enter the amount to deposit");
+ deposit=sc.nextInt();
+ amount=amount+deposit;
+System.out.println("available amount in hdfc :"+amount);
+}
+public void deposit()
+{ System.out.println("enter the amount to deposit");
+ withdraw=sc.nextInt();
+if(withdraw<amount)
+{
+ amount=amount-withdraw;
+System.out.println("available amount in hdfc :"+amount);
+}
+else
+{
+ System.out.println("insufficent funds");
+}
+}
+}
+class SBI extends Bank
+{
+int deposit;
+int withdraw;
+Scanner sc=new Scanner(System.in);
+public SBI(int amount)
+{
+super(amount);
+}
+public void withdraw()
+{
+ System.out.println("enter the amount to deposit");
+ deposit=sc.nextInt();
+ amount=amount+deposit;
+System.out.println("available amount in SBI :"+amount);
+}
+public void deposit()
+{ System.out.println("enter the amount to deposit");
+ withdraw=sc.nextInt();
+if(withdraw<amount)
+{
+ amount=amount-withdraw;
+System.out.println("available amount in SBI :"+amount);
+}
+else
+{
+ System.out.println("insufficent funds");
+}
+}
+}
+class m2
+{
+ public static void main(String args[])
+{
+  Bank a1=new hdfc(20000);
+  a1.withdraw();
+  a1.deposit();
+  Bank b1=new SBI(50000);
+  b1.withdraw();
+  b1.deposit();
+}
+}
