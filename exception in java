@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+class ZeroMaxMarksException extends Exception
+{
+    public ZeroMaxMarksException(String message)
+    {
+        super(message);
+    }
+}
+
+public class MarksInput 
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter marks obtained: ");
+        int marks = sc.nextInt();
+        
+        System.out.print("Enter maximum marks: ");
+        int maxMarks = sc.nextInt();
+        
+        try 
+        {
+            if (maxMarks == 0)
+            {
+                throw new ZeroMaxMarksException("Maximum marks cannot be zero.");
+            }
+        } catch (ZeroMaxMarksException e) {
+            System.out.println(e);
+        } 
+        System.out.println("rest of the code");
+    }
+}
+
+
+
+
+
+
+
+import java.util.*;
+class m2
+{
+    public static void main(String args[])
+    {
+         Scanner sc =new Scanner(System.in);
+         int a=sc.nextInt();
+         try
+         {
+             if(a<18)
+             throw new  NotEligibleForVoteException("not eligible for vote");
+             
+         }
+         catch(NotEligibleForVoteException e)
+         {
+              System.out.println(e);
+         }
+         System.out.println("rest of the code");
+    }
+        
+    }
+
+class NotEligibleForVoteException extends Exception
+{
+    public NotEligibleForVoteException(String message)
+    {
+        super(message);
+    }
+}
