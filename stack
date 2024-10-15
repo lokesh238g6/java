@@ -1,0 +1,52 @@
+import java.util.*;
+
+class Stack {
+    private List<Integer> stackList; // To hold stack elements
+
+    public Stack()
+    {
+        stackList = new ArrayList<>(); // Initialize the stack
+    }
+
+    public void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of elements you want to push: ");
+        int n = sc.nextInt();
+
+        System.out.println("Enter the elements you want to push:");
+        for (int i = 0; i < n; i++) {
+            int element = sc.nextInt();
+            push(element); // Push each element
+        }
+    }
+
+    public void push(int element) {
+        stackList.add(element); // Add element to the stack
+        System.out.println("Pushed: " + element);
+    }
+
+    public void pop() {
+        if (!stackList.isEmpty()) {
+            int element = stackList.remove(stackList.size() - 1); // Remove and get the last element
+            System.out.println("Popped: " + element);
+        } else {
+            System.out.println("Stack is empty.");
+        }
+    }
+
+    public void display() {
+        System.out.println("Current stack elements:");
+        Iterator<Integer> iterator = stackList.iterator(); // Create an iterator for the stack
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next()); // Print each element
+        }
+    }
+
+    public static void main(String[] args) {
+        Stack stack = new Stack(); // Create an instance of Stack
+        stack.input(); // Take input from user
+        stack.display(); // Display the current stack
+        stack.pop(); // Pop the top element
+        stack.display(); // Display the stack after popping
+    }
+}
