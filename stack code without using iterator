@@ -1,0 +1,50 @@
+import java.util.*;
+
+class Stack {
+    int n;
+    List<Integer> stackList;
+
+    public Stack() {
+        stackList = new ArrayList<>();
+    }
+
+    public void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number of elements you want to add:");
+        n = sc.nextInt();
+        System.out.println("Enter the elements:");
+        for (int i = 0; i < n; i++) {
+            int element = sc.nextInt(); // Read element inside the loop
+            push(element); // Push each element
+        }
+    }
+
+    public void push(int element) {
+        stackList.add(element);
+        System.out.println("Pushed: " + element);
+    }
+
+    public void pop() {
+        if (!stackList.isEmpty()) {
+            int element = stackList.remove(stackList.size() - 1);
+            System.out.println("Popped: " + element);
+        } else {
+            System.out.println("Stack is empty.");
+        }
+    }
+
+    public void display() {
+        System.out.println("Stack is:");
+        for (int i = 0; i < stackList.size(); i++) {
+            System.out.println(stackList.get(i));
+        }
+    }
+
+    public static void main(String args[]) {
+        Stack a1 = new Stack(); // Change class name to Stack
+        a1.input();
+        a1.display(); // Removed a1.push() call, as it is unnecessary
+        a1.pop();
+        a1.display();
+    }
+}
