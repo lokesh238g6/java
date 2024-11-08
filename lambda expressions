@@ -1,0 +1,111 @@
+import java.util.*;
+interface i
+{
+ public int cal();
+}
+class even
+{
+ public static int add()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter the  n value");
+int n=sc.nextInt();
+ if(n%2==0)
+{
+ return n;
+}
+else
+{
+return 0;
+}
+}
+}
+class static1
+{
+public static void main(String args[])
+{
+ i a1=even::add;
+int r= a1.cal();
+System.out.println(r);
+}
+}
+
+Method
+
+import java.util.*;
+interface i
+{
+ public int cal();
+}
+class even
+{
+ public  int add()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter the  n value");
+int n=sc.nextInt();
+ if(n%2==0)
+{
+ return n;
+}
+else
+{
+return 0;
+}
+}
+}
+class method
+{
+public static void main(String args[])
+{
+ even a1= new even();
+i a2=a1::add;
+int r= a2.cal();
+
+System.out.println(r);
+}
+}
+
+
+Linear serach
+
+import java.util.*;
+
+interface Search {
+    public int check(int key);
+}
+
+ class Check1
+ {
+    public static void main(String args[]) 
+{
+ Scanner sc = new Scanner(System.in);
+ System.out.println("Enter the size of the array:");
+ int n = sc.nextInt();
+ int[] a1 = new int[n];
+ System.out.println("Enter array elements:");
+ for (int i = 0; i < n; i++)
+ {
+ a1[i] = sc.nextInt();
+ }
+System.out.println("Enter the element you want to search:");
+int s = sc.nextInt();
+Search a = (key) -> {for (int i = 0; i < n; i++) 
+{
+  if (a1[i] == key) 
+{
+  return i;  
+}
+}
+return -1;
+};
+int result =  a.check(s);
+if (result != -1) {
+System.out.println("Element found at index " + result);
+}
+ else 
+{
+ System.out.println("Element not found.");
+}
+}
+}
