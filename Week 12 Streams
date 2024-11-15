@@ -1,0 +1,187 @@
+import java.util.stream.*;
+import java.util.*;
+class emptystring
+{
+ public static void main(String args[])
+{   
+  ArrayList<String> a1=new ArrayList<String>();
+ a1.add("ght");
+ a1.add("fdgf");
+ a1.add("fgd");
+ a1.add("fdgf");
+ a1.add("gvfjnbf
+");
+ Stream<String> a=a1.stream();
+a.forEach(s->System.out.println(s));
+}
+}
+
+
+
+import java.util.stream.*;
+import java.util.*;
+class emptystring
+{
+ public static void main(String args[])
+{   
+  ArrayList<Integer> a1=new ArrayList<Integer>(); 
+    a1.add(20);
+a1.add(2);
+  Stream<Integer> s=a1.stream().map(x->x*x*x);
+s.forEach(f->System.out.println(f));
+
+}
+}
+
+import java.util.stream.*;
+import java.util.*;
+class emptystring
+{
+ public static void main(String args[])
+{   
+  ArrayList<Integer> a1=new ArrayList<Integer>(); 
+    a1.add(20);
+    a1.add(2);
+  List  s=a1.stream().filter(x->x%2==0).collect(Collectors.toList());
+System.out.println(s);
+}
+}
+
+
+
+import java.util.stream.*;
+import java.util.*;
+class emptystring
+{
+ public static void main(String args[])
+{   
+  ArrayList<Integer> a1=new ArrayList<Integer>(); 
+    a1.add(3);
+    a1.add(2);
+  Stream<Integer> s2=a1.stream().filter(x->x%3==0);
+s2.forEach(s1->System.out.println(s1));
+}
+}
+
+import java.util.stream.*;
+import java.util.*;
+class emptystring
+{
+ public static void main(String args[])
+{   
+  ArrayList<Integer> a1=new ArrayList<Integer>(); 
+    a1.add(3);
+    a1.add(2);
+  double s2=a1.stream().reduce(0,(x,y)->x+y);
+System.out.println(s2);
+}
+}
+
+import java.util.stream.*;
+import java.util.*;
+class emptystring
+{
+ public static void main(String args[])
+{   
+  ArrayList<Integer> a1=new ArrayList<Integer>(); 
+    a1.add(3);
+    a1.add(2);
+  double s2=a1.stream().reduce(1,(x,y)->x*y);
+System.out.println(s2);
+}
+}
+
+
+//Write a Java program using streams to find sum() of even elements
+
+import java.util.stream.*;
+import java.util.*;
+class emptystring
+{
+ public static void main(String args[])
+{   
+  ArrayList<Integer> a1=new ArrayList<Integer>(); 
+    a1.add(20);
+    a1.add(2);
+  Stream<	Integer> s2=a1.stream().filter(x->x%2==0);
+double s1=s2.reduce(0,(x,y)->x+y);
+System.out.println(s1);
+}
+}
+
+//Write a Java program using streams to find product () of odd  elements in the list
+
+import java.util.stream.*;
+import java.util.*;
+class emptystring
+{
+ public static void main(String args[])
+{   
+  ArrayList<Integer> a1=new ArrayList<Integer>(); 
+    a1.add(21);
+    a1.add(2);
+  Stream<	Integer> s2=a1.stream().filter(x->x%2!=0);
+double s1=s2.reduce(1,(x,y)->x*y);
+System.out.println(s1);
+}
+}
+
+
+    //Count String whose length is more than three using streams
+
+import java.util.stream.*;
+import java.util.*;
+class emptystring
+{
+ public static void main(String args[])
+{   
+  ArrayList<String> a1=new ArrayList<String>(); 
+    a1.add("lokesh");
+    a1.add("lov");
+  a1.add("lov");
+  Stream<	String> s2=a1.stream().filter(x->x.length()>3);
+    long s3=s2.count();
+System.out.println(s3);
+}
+}
+
+
+//Count number of String which starts with "a” using streams
+
+import java.util.stream.*;
+import java.util.*;
+class emptystring
+{
+ public static void main(String args[])
+{   
+  ArrayList<String> a1=new ArrayList<String>(); 
+    a1.add("lokesh");
+    a1.add("lov");
+  a1.add("lov");
+  long s2=a1.stream().filter(x->x.startsWith("a")).count();
+
+System.out.println(s2);
+}
+}
+
+
+//Get count, min, max, sum, and the average for numbers using streams
+
+import java.util.*;
+import java.util.IntSummaryStatistics;
+import java.util.stream.IntStream;
+
+public class s1
+ {
+    public static void main(String[] args)
+ {      
+        int[] numbers = {5, 10, 15, 20, 25};
+        IntSummaryStatistics s = Arrays.stream(numbers)
+                                           .summaryStatistics();
+        System.out.println("Count: " + s.getCount());
+        System.out.println("Min: " + s.getMin());
+        System.out.println("Max: " + s.getMax());
+        System.out.println("Sum: " + s.getSum());
+        System.out.println("Average: " + s.getAverage());
+    }
+}
